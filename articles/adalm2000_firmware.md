@@ -1,6 +1,6 @@
 ---
 title: "ADALM2000のアップデートに失敗して起動しなくなった際の対処"
-emoji: "💻"
+emoji: "🔨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["ADALM2000","RaspberryPi4","dfu-util"]
 published: true
@@ -72,8 +72,8 @@ $ dmesg
 $ lsusb
 Bus 002 Device 002: ID 8564:1000 Transcend Information, Inc. JetFlash
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
-Bus 001 Device 008: ID 0456:b675 Analog Devices, Inc. 
-Bus 001 Device 003: ID 17ef:6047 Lenovo 
+Bus 001 Device 008: ID 0456:b675 Analog Devices, Inc.
+Bus 001 Device 003: ID 17ef:6047 Lenovo
 Bus 001 Device 002: ID 2109:3431 VIA Labs, Inc. Hub
 Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```
@@ -85,7 +85,7 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 ```sh
 $ sudo apt install dfu-util
 パッケージリストを読み込んでいます... 完了
-依存関係ツリーを作成しています                
+依存関係ツリーを作成しています
 状態情報を読み取っています... 完了
 以下のパッケージが新たにインストールされます:
   dfu-util
@@ -192,5 +192,5 @@ $ sudo dfu-util -a uboot-extra-env.dfu -U ./uboot-extra-env.dfu
 
 # 教訓
 
-眠いときの気分転換（現実逃避）にクリティカルな作業をやるのはやめましょう。
+眠いときの気分転換（現実逃避）にクリティカルな作業（ファームウェアのバージョンアップなど）を行うのはやめましょう。
 
