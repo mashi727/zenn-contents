@@ -1,10 +1,11 @@
 ---
 title: "ADALM2000のアップデートに失敗して起動しなくなった際の対処"
-emoji: "🔧"
+emoji: "🛠️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["ADALM2000","RaspberryPi4","dfu-util"]
 published: true
 ---
+
 
 
 # これは何？
