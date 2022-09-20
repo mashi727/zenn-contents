@@ -119,6 +119,30 @@ Hi YourNAME! You've successfully authenticated, but GitHub does not provide shel
 となれば、完了です。
 
 
-#  OS再インストール時の再設定
+# Issue
+##  OS再インストール時の再設定
 
 OSをクリーンインストールなどした場合は、これらのファイルと`~/.ssh/config`を`~/.ssh`以下にコピーすれば設定終了です。
+
+
+## しばらく使っているとログインできなくなる
+
+リモートリポジトリの名前変更などしていないのに
+
+```sh
+% git push -u origin main                                                                                                                                        [~/Dropbox/00_works/portfolio/zenn-contents][main]
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
+となったら、もう一度
+
+```sh
+$ ssh -T ssh.github.com
+Hi YourNAME! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+すれば、`push`できるようになります。
