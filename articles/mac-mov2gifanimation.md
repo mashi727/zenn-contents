@@ -6,7 +6,6 @@ topics: ["gif","mov","Mac","animation","gifアニメ"]
 published: true
 ---
 
-
 # これは何？
 
 Qiita等へ投稿する際に、画面の様子をアップしたい時に、画面のgifをさくっと作成するためのワークフローです。
