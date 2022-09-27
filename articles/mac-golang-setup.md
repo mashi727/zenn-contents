@@ -72,7 +72,7 @@ using module mode; GOMOD=/dev/null
 % cd ~/go/src/hello
 % vi hello.go
 ```
-という感じで、hello.goを開いて、以下のコードを入力します。
+という感じで、hello.goを作成して、以下のコードを入力します。
 
 ```go
 package main
