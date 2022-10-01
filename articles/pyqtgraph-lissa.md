@@ -1,5 +1,5 @@
 ---
-title: "PyQtGraphの凡例などについて"
+title: "PyQtGraphの凡例などのフォント設定について"
 emoji: "💻"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["PyQtGraph","python","PySide6","Legend"]
