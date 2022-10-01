@@ -71,7 +71,7 @@ wwwwwww HEAD@{3}: rebase (start): checkout zzzzzzz
 wwwwwww HEAD@{4}: rebase (finish): returning to refs/heads/main
 wwwwwww HEAD@{5}: rebase (start): checkout zzzzzzz
 wwwwwww HEAD@{6}: commit: tmp
-852e34e HEAD@{7}: commit: Nasdaqシンボルの検索機能の実装まで（表示を整えるのは後ほど）
+YYYYYYY HEAD@{7}: commit: Nasdaqシンボルの検索機能の実装まで（表示を整えるのは後ほど）
 zzzzzzz (HEAD -> main, tag: create_ui, origin/main) HEAD@{8}: commit (initial): 1st commit for fin
 ```
 
