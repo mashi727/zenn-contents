@@ -76,13 +76,13 @@ Macの場合、フォント名は、Font Bookの正式名称の下にある「�
 
 ![](/images/2022-10-01-17-21-05.png)
 
-ヒラギノフォントなどを指定すると、ときどき以下のようなメッセージが出力される。
+ヒラギノフォントなどを指定すると、ときどき以下のようなメッセージが出力されることがあります。
 
 ```sh
 qt.qpa.fonts: Populating font family aliases took 512 ms. Replace uses of "ヒラギノ角ゴシック" with its non-localized name "Hiragino Sans" to avoid this cost.
 ```
 
-このような場合、指示通りにHiragino Sansを設定すれば問題ありません。
+このような場合、あわてずさわがず指示通りにHiragino Sansを設定すれば問題ありません。
 
 :::details サンプルコード
 
