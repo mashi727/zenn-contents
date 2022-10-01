@@ -81,3 +81,22 @@ Dockは。チャート表示用とregion表示用の2つを作成しています
 
 次回は、ここから書き始めます。
 
+
+
+# 現状のコード
+
+`financeCall.py`を実行すると、アプリが起動します。
+
+## 実行用
+
+https://github.com/mashi727/finance_basic/blob/main/financeCall.py
+
+## UI用
+
+```sh
+% pyside6-uic financeUi.ui -o financeUi.py
+```
+
+で作成したpyファイルです。
+
+https://github.com/mashi727/finance_basic/blob/main/financeUi.py
