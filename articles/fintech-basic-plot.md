@@ -83,7 +83,12 @@ Dockは。チャート表示用とregion表示用の2つを作成しています
 
 
 tableViewまわりの設定を行います。
-左側の表示させたいtableView、この場合はtableView_ticker_symbolsをクリックした状態で、右側のプロパティエディタにて、
+
+
+```sh
+% pyside6-designer financeUi.ui
+```
+designerにてuiファイルを起動し、左側の表示させたいtableView（この場合はtableView_ticker_symbols）をクリックした状態で、右側のプロパティエディタにて、
 
 ![](/images/2022-10-02-09-41-02.png)
 
@@ -92,8 +97,7 @@ selectionModeを、ExtendedSelectionにします。
 
 ![](/images/2022-10-02-08-53-56.png)
 
-垂直（Vertical）方向のHeaderの削除は、commandsフォルダにある
-make_tableview_mode.pyに定義されている、TableModelにて行います。
+垂直（Vertical）方向のHeaderの削除は、commandsフォルダにあるmake_tableview_mode.pyに定義されている、TableModelにて行います。
 
 ```python
     def headerData(self, section, orientation, role):
@@ -113,9 +117,17 @@ make_tableview_mode.pyに定義されている、TableModelにて行います。
 
 
 起動後に検索する様子は、以下のとおりです。
-データの取得を行う場合は、少し時間がかかりますが二度目からはある気にするほどの時間はかからないものと思います。
+データの取得を行う場合は、少し時間がかかりますが二度目からは気にするほどの時間はかからないものと思います。
 
 ![](/images/symbol_search.gif)
+
+次回は、株価データの取得とチャートの表示を行います。
+
+# 株価データの取得
+
+# チャートの表示
+
+
 
 
 
