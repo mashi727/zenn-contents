@@ -83,15 +83,14 @@ Dockは。チャート表示用とregion表示用の2つを作成しています
 
 
 tableViewまわりの設定を行います。
-右側のプロパティエディタにて、
+左側の表示させたいtableView、この場合はtableView_ticker_symbolsをクリックした状態で、右側のプロパティエディタにて、
 
+![](/images/2022-10-02-09-37-07.png)
 
-![](/images/2022-10-02-08-40-02.png)
-
-selectionModeを、ExtendedSelectionにすることにより、以下のように行単位で選択できるようになります。
+selectionModeを、ExtendedSelectionにします。
+このことにより、以下のように行単位で選択できるようになります。
 
 ![](/images/2022-10-02-08-53-56.png)
-
 
 垂直（Vertical）方向のHeaderの削除は、commandsフォルダにある
 make_tableview_mode.pyに定義されている、TableModelにて行います。
