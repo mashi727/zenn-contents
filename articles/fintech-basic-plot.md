@@ -46,7 +46,8 @@ https://github.com/mashi727/finance_basic
 
 可視化（1）では、
 
-Yahoo Financeデータをもとに、ファンダメンタ分析に関する基本的な指標の計算と可視化を行います。
+Yahoo Financeデータをもとに、ファンダメンタ分析に関する基本的な指標の計算と可視化を行うつもりでしたが、Alpha Vantageを使用することにします。
+
 
 - チャートの表示
 - 財務諸表の取得、表示
@@ -61,11 +62,90 @@ Yahoo Financeデータをもとに、ファンダメンタ分析に関する基�
 
 ということで、ぼちぼちと地道に作成を進めたいと思います。
 
+# 4. チャートの表示
 
-# 4. 株価データの取得
+# 3. 株価データの取得
+
+いよいよ株価データの取得を行います。
+
+株価データの取得には、[pandas-datareader](https://pandas-datareader.readthedocs.io/en/latest/index.html#)を用います。
+pandas-datareaderは、pandasのコードベースから抽出されたデータリーダーで、pandasで扱うデータにリモートでアクセスします。pandasの複数のバージョンで動作します。
+
+リモートデータアクセス（Remote Data Access）では、pandas_datareader.data と pandas_datareader.wb の関数を用いて、様々なインターネットソースから pandas DataFrame にデータが抽出可能です。現在、以下のソースがサポートされています。
+
+- Tiingo
+- IEX
+- Alpha Vantage
+- Econdb
+- Enigma
+- Quandl
+- St.Louis FED (FRED)
+- Kenneth French’s data library
+- World Bank
+- OECD
+- Eurostat
+- Thrift Savings Plan
+- Nasdaq Trader symbol definitions
+- Stooq
+- MOEX
+- Naver Finance
+- Yahoo Finance
+
+先ほどは、Nasdaq Trader symbol definitionsにて株の銘柄をダウンロードしました。
+
+```python
+from pandas_datareader.nasdaq_trader import get_nasdaq_symbols
+df_ticker_symbol = get_nasdaq_symbols()
+```
+としています。
+
+ここでは、Alpha Vantageのデータを使用します。
+Yahooを使用する予定でしたが、データ取得の自由度の高さからAlpha Vantageを使用することとしました。
+
+登録は、Webから簡単に行うことができます。
+以下の条件に当てはまらない限り無料で使用できます。
+
+> Alpha Vantage では、ほとんどの API エンドポイントに無料でアクセスすることができます。標準のAPI使用制限（1分あたり5APIリクエスト、1日あたり500APIリクエスト）を超える使用例や、特定のプレミアムAPI機能を必要とする場合、お客様のアプリケーションを拡張するためのプレミアムプランを提供しています。
+
+[APIの詳細](https://www.alphavantage.co/documentation/)にも記載があります。
 
 
-# 3. チャートの表示
+APIキーの入手は、[こちら](https://www.alphavantage.co)のサイトから行うことができます。
+
+いろいろと整っていませんが、銘柄をダブルクリックすると株価を入手できるようになりました。
+
+操作している様子です。
+無料で1分足まで取得することができます。
+
+また、日中／日次／週次／月次の時系列を生と調整の両方でサポートされており、業界標準であるCRSP（Center for Research in Security Prices）の調整方法が使用されているとのことです。
+
+[FAQ](https://www.alphavantage.co/support/)に記載があります。
+
+
+データの素性については、他のサイトから取得したデータとの比較を行うなどしてもう少し調べてみます。
+
+とりあえず、
+
+```python
+from alpha_vantage.timeseries import TimeSeries
+```
+を用いてデータをダウンロードするところまで行いました。
+
+データを取得する部分（これだけでも動きます）は、以下のとおりです。
+
+```python
+from alpha_vantage.techindicators import TechIndicators
+symbol='AAPL'
+from alpha_vantage.timeseries import TimeSeries
+ts = TimeSeries(key=API_KEY, output_format='pandas')
+fetch_span = '1min'
+if fetch_span == 'Daily':
+  data, meta_data = ts.get_daily(symbol=symbol,outputsize='full')
+else:
+  data, meta_data = ts.get_intraday(symbol=symbol interval=fetch_span, outputsize='full')
+```
+
+![](/images/get_dataframe.gif)
 
 
 # 2. 銘柄の検索と表示
