@@ -122,7 +122,6 @@ APIキーの入手は、[こちら](https://www.alphavantage.co)のサイトか�
 [FAQ](https://www.alphavantage.co/support/)に記載があります。
 
 
-データの素性については、他のサイトから取得したデータとの比較を行うなどしてもう少し調べてみます。
 
 とりあえず、
 
@@ -144,8 +143,18 @@ if fetch_span == 'Daily':
 else:
   data, meta_data = ts.get_intraday(symbol=symbol interval=fetch_span, outputsize='full')
 ```
+## 現在の動作状況
+
+アプリ上での動作は、以下のようになりました。
 
 ![](/images/get_dataframe.gif)
+
+## 宿題
+
+
+Alpha Vantageのデータをダウンロードする方法は、`alpha_vantage`ライブラリを使用する他にもいくつかあります。
+
+データの素性については、他のサイトから取得したデータと本家のデモコードを使用した結果などを比較するなどしてもう少し調べる必要がありそうです。
 
 
 # 2. 銘柄の検索と表示
