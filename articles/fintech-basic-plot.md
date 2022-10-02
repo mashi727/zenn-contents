@@ -133,15 +133,21 @@ from alpha_vantage.timeseries import TimeSeries
 データを取得する部分（これだけでも動きます）は、以下のとおりです。
 
 ```python
+apikey_path = './.alpha_vantage_apikey'
+with open(apikey_path) as f:
+    API_KEY = f.readlines()[0]
+
 from alpha_vantage.techindicators import TechIndicators
 symbol='AAPL'
 from alpha_vantage.timeseries import TimeSeries
 ts = TimeSeries(key=API_KEY, output_format='pandas')
 fetch_span = '1min'
 if fetch_span == 'Daily':
-  data, meta_data = ts.get_daily(symbol=symbol,outputsize='full')
+    data, meta_data = ts.get_daily(symbol=symbol,outputsize='full')
 else:
-  data, meta_data = ts.get_intraday(symbol=symbol interval=fetch_span, outputsize='full')
+    data, meta_data = ts.get_intraday(symbol=symbol,interval=fetch_span, outputsize='full')
+
+print(data)
 ```
 ## 現在の動作状況
 
