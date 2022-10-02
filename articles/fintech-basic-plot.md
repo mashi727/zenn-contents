@@ -17,6 +17,13 @@ published: true
 
 公開しながら行うことにより、作業の進みが早くなることを期待しております。ということで、少しずつ書き足しながら、かつシリーズものとして作成を行います。
 
+## 現状のコード
+
+`financeCall.py`を実行すると、アプリが起動します。
+
+クローンしてお試しください。
+
+https://github.com/mashi727/finance_basic
 ## 環境
 
 当方の環境は以下のとおりです。
@@ -127,14 +134,3 @@ selectionModeを、ExtendedSelectionにします。
 
 # チャートの表示
 
-
-
-
-
-# 現状のコード
-
-`financeCall.py`を実行すると、アプリが起動します。
-
-クローンしてお試しください。
-
-https://github.com/mashi727/finance_basic
