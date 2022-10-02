@@ -85,7 +85,7 @@ Dockは。チャート表示用とregion表示用の2つを作成しています
 tableViewまわりの設定を行います。
 左側の表示させたいtableView、この場合はtableView_ticker_symbolsをクリックした状態で、右側のプロパティエディタにて、
 
-![](/images/2022-10-02-09-37-07.png)
+![](/images/2022-10-02-09-41-02.png)
 
 selectionModeを、ExtendedSelectionにします。
 このことにより、以下のように行単位で選択できるようになります。
