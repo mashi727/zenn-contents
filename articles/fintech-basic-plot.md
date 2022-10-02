@@ -123,16 +123,6 @@ make_tableview_mode.pyに定義されている、TableModelにて行います。
 
 `financeCall.py`を実行すると、アプリが起動します。
 
-## 実行用
+クローンしてお試しください。
 
-https://github.com/mashi727/finance_basic/blob/main/financeCall.py
-
-## UI用
-
-```sh
-% pyside6-uic financeUi.ui -o financeUi.py
-```
-
-で作成したpyファイルです。
-
-https://github.com/mashi727/finance_basic/blob/main/financeUi.py
+https://github.com/mashi727/finance_basic
