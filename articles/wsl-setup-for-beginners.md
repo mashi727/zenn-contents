@@ -12,5 +12,7 @@ WindowsにてWSLをインストールし、Dockerを動かすまでの記録で�
 
 以前は.bashrcにてdockerを起動していましたが、WSLでもsystemdが使えるようになりましたので、以下のサイトを参考にしてWSLをインストールしDockerの環境を整えます。
 
+https://learn.microsoft.com/ja-jp/windows/wsl/tutorials/gui-apps
+
 Dockerを使用する理由は、古い雑誌の記事などを試す場合などに、自分の環境を汚したくないためです。
 
