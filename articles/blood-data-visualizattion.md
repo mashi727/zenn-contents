@@ -3,7 +3,7 @@ title: "献血記録の可視化"
 emoji: "🏥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Python","PyQtGraph","献血","Selenium"]
-published: false
+published: true
 ---
 
 
