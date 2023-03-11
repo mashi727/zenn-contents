@@ -17,13 +17,18 @@ published: false
 2009.3.15以降とした理由は、血液分析の項目が異なるため実装が面倒だったからです。
 
 
+githubのリポジトリは、こちらです。
+
+https://github.com/mashi727/get_blood_data
+
+
 # 当方の環境
 
 当方の環境は以下のとおりです。
 
 ## HW
 - MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
-- macOS Monterey 12.5.1（21G83）
+- macOS Ventura バージョン13.2.1（22D68）
 - 2.8 GHz クアッドコアIntel Core i7
 
 ## SW
